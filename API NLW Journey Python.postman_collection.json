@@ -36,12 +36,12 @@
 					"response": []
 				},
 				{
-					"name": "<tripId>/confirm",
+					"name": "<tripId>/links",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/trips/:tripId/confirm",
+							"raw": "http://localhost:3000/trips/:tripId/links",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -50,7 +50,7 @@
 							"path": [
 								"trips",
 								":tripId",
-								"confirm"
+								"links"
 							],
 							"variable": [
 								{
@@ -63,7 +63,7 @@
 					"response": []
 				},
 				{
-					"name": "<tripId>/confirm",
+					"name": "<tripId>/links",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -77,7 +77,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/trips/:tripId/confirm",
+							"raw": "http://localhost:3000/trips/:tripId/links",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -86,7 +86,133 @@
 							"path": [
 								"trips",
 								":tripId",
-								"confirm"
+								"links"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/invites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leandro\",\r\n    \"email\": \"some@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/invites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"invites"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/participants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/participants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"participants"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/activities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"occurs_at\": \"02-04-2024\",\r\n    \"title\": \"Viajar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"activities"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/activities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"activities"
 							],
 							"variable": [
 								{
@@ -115,6 +241,33 @@
 					}
 				},
 				"url": "http://localhost:3000/trips"
+			},
+			"response": []
+		},
+		{
+			"name": "participants/<participantId>/confirm",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/participants/:participantId/confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"participants",
+						":participantId",
+						"confirm"
+					],
+					"variable": [
+						{
+							"key": "participantId",
+							"value": "cdf7db8f-da7f-47f1-8319-3f7d529ced22"
+						}
+					]
+				}
 			},
 			"response": []
 		}
