@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "d85f4cfb-6a23-49f8-aebf-7b82dfa55188",
+		"name": "API NLW Journey Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32695347"
+	},
+	"item": [
+		{
+			"name": "trips",
+			"item": [
+				{
+					"name": "<tripId>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/confirm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"confirm"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "<tripId>/confirm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"hotel.com\",\r\n    \"title\": \"Hotel de Hospedaria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/trips/:tripId/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trips",
+								":tripId",
+								"confirm"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "e12b6e22-2c80-431a-ae9a-d51e2807c3b4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"SJCampos\",\r\n    \"start_date\": \"02-01-2024\",\r\n    \"end_date\": \"06-01-2024\",\r\n    \"owner_name\": \"Victor\",\r\n    \"owner_email\": \"victor@email.com\",\r\n    \"emails_to_invite\":[\r\n        \"um@email.com\",\r\n        \"dois@email.com\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/trips"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
